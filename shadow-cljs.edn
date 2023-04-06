@@ -1,0 +1,22 @@
+;; shadow-cljs configuration
+{:source-paths
+ ["src/dev"
+  "src/main"
+  "src/test"]
+
+ :dev-http {8080 "public"}
+
+ :dependencies
+ []
+
+ :builds
+ {:app {:target :browser
+        :output-dir "public/js" 
+        :modules {:main {}
+                  :html-five {:entries [#_bhlie.php-book.html-five.geolocation bhlie.php-book.html-five.canvas-text bhlie.php-book.html-five.lines]
+                              :depends-on #{:main}}
+                  :ajax {:depends-on #{:main}
+                         :entries [bhlie.php-book.ajax]}
+                  :forms {:depends-on #{:main}
+                          :entries [bhlie.php-book.forms]}}
+        :compiler-options {:optimizations :none}}}}

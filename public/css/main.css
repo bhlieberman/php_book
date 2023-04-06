@@ -1,0 +1,27 @@
+html {
+    background-image: url("../32px-Lambda_lc.svg.png");
+    background-color: antiquewhite;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: content-box;
+}
+
+div {
+    background-color: gray;
+}
+
+a:visited {
+    color: red;
+}
+
+a[href*='google']:hover {
+    color: green;
+}
+
+a[id^='fake']:hover {
+    color: indigo;
+}
